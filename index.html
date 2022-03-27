@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script defer type="text/javascript" src="calculator.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <title>D2R Merc Calculator</title>
+</head>
+<body>
+  <h2>For D2R 2.4+</h2>
+  <p>If you come across any issues, please message me on Discord (Warren#2433) or <a href="https://github.com/Warren1001/Merc_Calculator/issues">create an issue on the GitHub</a>.</p>
+  <br>
+  <div id="input">
+    <label for="typeSelect" class="inputLabel">Type:</label>
+    <select id="typeSelect">
+      <option value=0>Rogue Scout (Fire)</option>
+      <option value=1>Rogue Scout (Cold)</option>
+      <option value=2>Desert Mercenary (Prayer)</option>
+      <option value=3>Desert Mercenary (Defiance)</option>
+      <option value=4>Desert Mercenary (Blessed Aim)</option>
+      <option value=5>Desert Mercenary (Thorns)</option>
+      <option value=6 selected>Desert Mercenary (Holy Freeze)</option>
+      <option value=7>Desert Mercenary (Might)</option>
+      <option value=8>Iron Wolf (Fire)</option>
+      <option value=9>Iron Wolf (Cold)</option>
+      <option value=10>Iron Wolf (Lightning)</option>
+      <option value=11>Barbarian (Bash)</option>
+      <option value=12>Barbarian (Frenzy)</option>
+    </select>
+    <br>
+    <label for="difficultySelect" class="inputLabel">Difficulty:</label>
+    <select id="difficultySelect">
+      <option value=2>Normal</option>
+      <option value=1>Nightmare</option>
+      <option value=0 selected>Hell</option>
+    </select>
+    <br>
+    <label for="level" class="inputLabel">Level:</label>
+    <input type="number" id="level" value="1" min="1" max="98">
+  </div>
+  <div id="display">
+    <p class="centered">Hover over a box for additional information.</p>
+    <label for="strength" class="displayLabel" title="Base Strength">Strength:</label>
+    <input type="text" id="strength" title="Base Strength" readonly>
+    <br>
+    <label for="dexterity" class="displayLabel" title="Base Dexterity">Dexterity:</label>
+    <input type="text" id="dexterity" title="Base Dexterity" readonly>
+    <br>
+    <div id="skillsContainer">
+      <label for="skills" class="displayLabel" title="x% is chance next attack is this skill
+If x% is not present, its been excluded because the skill is used only in certain scenarios">Skills:</label>
+      <textarea id="skills" rows="2" cols="28" title="x% is chance next attack is this skill
+If x% is not present, its been excluded because the skill is used only in certain scenarios" readonly></textarea>
+      <br>
+    </div>
+    <label for="life" class="displayLabel" title="Base HP, can't be less than 40">Life:</label>
+    <input type="text" id="life" title="Base HP, can't be less than 40" readonly>
+    <br>
+    <label for="ar" class="displayLabel" title="Attack Rating 'without Dexterity | with Dexterity' bonus, does not account for skills
+Could be wrong, no good way to test, no clearly decisive information available">Attack Rating:</label>
+    <input type="text" id="ar" title="Attack Rating 'without Dexterity | with Dexterity' bonus, does not account for skills
+Could be wrong, no good way to test, no clearly decisive information available" readonly>
+    <br>
+    <label for="def" class="displayLabel" title="Defense 'without Dexterity | with Dexterity' bonus, does not account for skills">Defense:</label>
+    <input type="text" id="def" title="Defense 'without Dexterity | with Dexterity' bonus, does not account for skills" readonly>
+    <br>
+    <label for="damage" class="displayLabel" title="Damage 'without Strength/Dexterity | with Strength/Dexterity' bonus">Damage:</label>
+    <input type="text" id="damage" title="Damage 'without Strength/Dexterity | with Strength/Dexterity' bonus" readonly>
+    <br>
+    <label for="res" class="displayLabel" title="Resistances in 'Normal | NM | Hell'">Resistances:</label>
+    <input type="text" id="res" title="Resistances in 'Normal | NM | Hell'" readonly>
+  </div>
+  </body>
+</html>

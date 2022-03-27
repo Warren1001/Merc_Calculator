@@ -1,0 +1,52 @@
+
+:root {
+  color-scheme: dark light;
+}
+
+.displayLabel {
+  min-width: 95px;
+  display: inline-block;
+  text-align: right;
+}
+
+.inputLabel {
+  min-width: 67px;
+  display: inline-block;
+  text-align: right;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+textarea {
+  resize: none;
+  vertical-align: top
+}
+
+#input {
+  float: left;
+  min-width: 250px;
+}
+
+#skillsContainer {
+  vertical-align: middle;
+}
+
+#display {
+  float: left;
+}
+
+h2 {
+  padding-bottom: 5;
+  margin: 5;
+}
+
+input[type='number'] {
+    width: 40px;
+}
